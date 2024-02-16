@@ -1,0 +1,25 @@
+1. Topic Modeling Agent:
+* Responsible for preprocessing the text data (e.g., tokenization, stopwords removal)
+* Applies topic modeling techniques (e.g., Latent Dirichlet Allocation, Non-Negative Matrix Factorization) to extract underlying topics
+* Output: Topic-word distribution matrices
+2. Embedding Agent:
+* Receives topic-word distribution matrices from the Topic Modeling Agent
+* Generates dense vector representations (embeddings) for each paper using techniques like Word2Vec or Doc2Vec
+* Output: Paper embeddings
+3. Similarity Calculation Agent:
+* Calculates similarity scores between paper embeddings using cosine similarity or other distance metrics
+* Output: Similarity matrix
+4. Clustering Agent:
+* Receives the similarity matrix from the Similarity Calculation Agent
+* Applies hierarchical clustering algorithms (e.g., agglomerative, divisive) to group papers into clusters
+* Output: Hierarchical clustering tree
+5. Validation Agent:
+* Evaluates the quality of the clustering results using internal validation metrics (e.g., silhouette score, Calinski-Harabasz index)
+* Provides feedback to the Clustering Agent for parameter tuning or algorithm selection
+6. Topic Refining Agent:
+* Analyzes the cluster labels and topic-word distributions to identify emerging topics or subtopics
+* Refines the topic models and updates the paper embeddings accordingly
+7. Visualization Agent:
+* Receives the final clustering results and generates interactive visualizations (e.g., dendrograms, heatmaps) to facilitate exploration and analysis by humans
+
+This team of AI agents can work together to efficiently and effectively perform hierarchical clustering of research papers, leveraging their complementary strengths to produce high-quality results
